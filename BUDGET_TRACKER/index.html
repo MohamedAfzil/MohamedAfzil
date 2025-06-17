@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Budget Tracker</h1>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-toggle" />
+      <label id="theme-label" for="theme-toggle">Dark Theme: OFF</label>
+    </div>
+
+    <!-- Adjust Income -->
+    <form id="income-form" class="section">
+      <h2>Adjust Income</h2>
+      <input type="number" id="adjust-amount" placeholder="Enter amount" required />
+      <select id="adjust-type">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+      </select>
+      <button type="submit">Update Income</button>
+    </form>
+
+    <!-- Current Balances -->
+    <div class="balance section">
+      <h2>Total Income: <span id="total-income">₹0</span></h2>
+      <h2>Remaining Balance: <span id="remaining-balance">₹0</span></h2>
+    </div>
+
+    <!-- Add Expense -->
+    <form id="expense-form" class="section">
+      <h2>Add Expense</h2>
+      <input type="text" id="expense-description" placeholder="Description (letters only)" required />
+      <input type="number" id="expense-amount" placeholder="Amount" required />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <!-- Transaction History -->
+    <div class="section">
+      <h2>Transaction History</h2>
+      <ul id="transaction-list"></ul>
+    </div>
+
+    <!-- Reset All -->
+    <button id="reset-button" class="reset-btn">Reset All</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
